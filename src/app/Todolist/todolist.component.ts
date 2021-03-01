@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
       styleUrls: ['./todolist.component.css']
      })
      export class ToDoListComponent {
-       tasks: string [] = ["Coffee", "Breakfast", "Tea"];
-       task: string | undefined;
+       tasks: string [] = [];
+       task!: string;
 
     
       constructor() {}
      addTask(){
-          console.log(this.task);
+         this.tasks.push(this.task);
      }
      }
