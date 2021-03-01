@@ -9,10 +9,14 @@ import { Component } from '@angular/core';
      export class ToDoListComponent {
        tasks: string [] = [];
        task!: string;
+          i!: number;
 
     
       constructor() {}
      addTask(){
          this.tasks.push(this.task);
+     }
+     deleteTask(i: number){
+          delete this.tasks[i];
      }
      }
